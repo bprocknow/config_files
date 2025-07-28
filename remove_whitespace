@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ $# -ne 1 ]; then
+  echo "Usage: $0 <file>" >&2
+  exit 1
+fi
+
+file="$1"
+
+# Ensure it’s a regular file we can write
+if [ ! -f "$file" ] || [ ! -w "$file" ]; then
+  echo "Error: '$file' is not writable or not a regular file." >&2
+  exit 1
+fi
+
+# Use a temp file so we don’t clobber on failure
+tmp="$(mktemp)" || exit 1
+trap 'rm -f "$tmp"' EXIT
+
+# Strip trailing spaces and tabs from each line
+# [[:blank:]] matches space and tab only
+sed 's/[[:blank:]]*$//' "$file" > "$tmp"
+
+# Replace original
+mv "$tmp" "$file"
