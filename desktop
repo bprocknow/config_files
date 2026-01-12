@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FreeCAD
+Comment=FreeCAD Modelling Software
+Exec=/home/bprockno/Applications/FreeCad/FreeCAD_1.0.0-conda-Linux-x86_64-py311.AppImage
+Icon=/home/bprockno/Applications/FreeCad/freecad.png
+Terminal=false
+Type=Application
+Categories=Utility;
