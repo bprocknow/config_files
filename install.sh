@@ -108,6 +108,8 @@ main() {
         link_file "$ROOT_DIR/desktop/FreeCAD.desktop" "$HOME/.local/share/applications/FreeCAD.desktop"
     fi
 
+    echo "dnf install tmux vim npm"
+    echo "npm install @openai/codex"
     echo "Install complete. Restart your shell to pick up bashrc changes."
 }
 
