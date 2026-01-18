@@ -17,7 +17,7 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 2000
 gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
 
-export ANKI_BASE="/home/$(whoami)/repos/language_tools/Anki2"
+export ANKI_BASE="/home/$(whoami)/repos/languageTools/Anki2"
 
 # Swap Caps Lock and Escape (X11/Wayland)
 if [[ -n "${WAYLAND_DISPLAY:-}" ]]; then
